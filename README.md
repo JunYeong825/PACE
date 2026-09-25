@@ -7,8 +7,8 @@
 </p>
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/ACCV%202026-1b6ac9.svg"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Paper-PDF-b31b1b.svg"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Project-Page-1b6ac9.svg"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Paper-b31b1b.svg"></a>
 </p>
 
 <p align="center">
