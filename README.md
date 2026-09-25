@@ -1,4 +1,4 @@
-# Beyond Single Sentences: Composed Image Retrieval with Long-Form Modification Texts
+<h1 align="center">Beyond Single Sentences:<br>Composed Image Retrieval with Long-Form Modification Texts</h1>
 
 <p align="center">
   <b>Junyeong Jang</b> &nbsp;·&nbsp; <b><a href="https://sungonce.github.io/">Seongwon Lee</a></b><sup>*</sup><br>
