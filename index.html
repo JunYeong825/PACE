@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="We introduce L-CIRR, a long-form composed image retrieval benchmark, and PACE, a retrieval framework that progressively accumulates textual information sentence by sentence.">
+    <meta name="keywords" content="Composed Image Retrieval, Long Text, Hard Negative Mining, Vision-Language Model, ACCV 2026">
+
+    <meta property="og:title" content="Beyond Single Sentences: Composed Image Retrieval with Long-Form Modification Texts">
+    <meta property="og:description" content="ACCV 2026. We introduce L-CIRR, a long-form composed image retrieval benchmark, and PACE, a progressive text accumulation framework.">
+    <meta property="og:image" content="static/images/teaser.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Beyond Single Sentences: Composed Image Retrieval with Long-Form Modification Texts">
+    <meta name="twitter:description" content="ACCV 2026. We introduce L-CIRR, a long-form composed image retrieval benchmark, and PACE, a progressive text accumulation framework.">
+    <meta name="twitter:image" content="static/images/teaser.png">
+
+    <title>Beyond Single Sentences: Composed Image Retrieval with Long-Form Modification Texts</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+</head>
+<body>
+
+<!-- Title / authors / links -->
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="title is-1 publication-title">Beyond Single Sentences:<br>Composed Image Retrieval with Long-Form Modification Texts</h1>
+
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block">Junyeong Jang,</span>
+                        <span class="author-block"><a href="https://sungonce.github.io/" target="_blank">Seongwon Lee</a><sup>*</sup></span>
+                    </div>
+
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block">School of Electrical Engineering, Kookmin University</span><br>
+                        <span class="author-block is-size-6"><sup>*</sup>Corresponding author</span>
+                    </div>
+
+                    <div class="is-size-5 publication-venue">
+                        Asian Conference on Computer Vision (ACCV) 2026
+                    </div>
+
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+                            <!-- Paper PDF -->
+                            <span class="link-block">
+                                <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                                    <span>Paper</span>
+                                </a>
+                            </span>
+                            <!-- Code -->
+                            <span class="link-block">
+                                <a href="https://github.com/JunYeong825/PACE" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon"><i class="fab fa-github"></i></span>
+                                    <span>Code</span>
+                                </a>
+                            </span>
+                            <!-- Dataset -->
+                            <span class="link-block">
+                                <a class="button is-normal is-rounded is-dark" style="pointer-events: none; opacity: 0.6;">
+                                    <span class="icon"><i class="fas fa-database"></i></span>
+                                    <span>L-CIRR (coming soon)</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Teaser -->
+<section class="hero teaser">
+    <div class="container is-max-desktop">
+        <div class="hero-body">
+            <img src="static/images/teaser.png" alt="Comparison between CIRR and L-CIRR">
+            <p class="figure-caption has-text-centered">
+                Comparison between a conventional CIR benchmark (CIRR) and our proposed benchmark (<b>L-CIRR</b>) for the same image pair.
+                While existing benchmarks provide only a brief, ambiguous, single-attribute text with weak supervision, L-CIRR provides a
+                long, detailed modification text that clearly describes multiple fine-grained visual changes, offering substantially
+                stronger supervision for composed image retrieval.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Abstract -->
+<section class="section hero is-light">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Abstract</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        Existing Composed Image Retrieval (CIR) datasets rely on short, single-sentence modification texts. Such texts are
+                        often ambiguous and provide insufficient descriptions of compound visual changes, resulting in limited supervision
+                        for learning fine-grained image&ndash;text composition. To address this limitation, we introduce <b>L-CIRR</b>, a new
+                        benchmark built on CIRR that provides long, detailed modification texts for each image pair. We further propose
+                        <b>PACE</b> (Progressive text Accumulation for Composed image rEtrieval), a retrieval framework designed to
+                        effectively exploit this richer supervision through two key components. First, progressive text accumulation, which
+                        incrementally integrates textual information sentence by sentence, constructs increasingly discriminative query
+                        representations. Second, multi-step hard negative mining exploits the intermediate embeddings from each accumulation
+                        step to mine hard negatives, facilitating more effective representation learning throughout training. Extensive
+                        experiments demonstrate that PACE, trained with the fine-grained supervision of L-CIRR, consistently outperforms
+                        existing methods on both fine-grained and general-purpose retrieval benchmarks while remaining robust to substantial
+                        variations in modification text length.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- L-CIRR Dataset -->
+<section class="section hero">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-full">
+                <h2 class="title is-3">L-CIRR Dataset</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        L-CIRR extends the existing CIRR dataset with long, detailed modification texts generated by a Vision-Language Model
+                        (Gemini-2.5-Flash). For each triplet, the reference image and the target image are jointly provided to the model
+                        along with a prompt that instructs it to produce a comprehensive, multi-sentence modification text of the visual
+                        differences between the two images. As a result, L-CIRR shares the same image pairs as CIRR while providing
+                        substantially more expressive modification texts.
+                    </p>
+                </div>
+
+                <div class="section-figure">
+                    <img src="static/images/dataset_table.png" alt="Comparison of dataset characteristics across CIR benchmarks">
+                    <p class="figure-caption has-text-centered">
+                        Comparison of dataset characteristics and modification text statistics across different CIR benchmarks. L-CIRR texts
+                        average 113.7 tokens, 21.5 attributes, and 27.5 objects, with 76.7 unique tokens per text &mdash; a substantially
+                        larger scale across all measured dimensions than existing benchmarks.
+                    </p>
+                </div>
+
+                <div class="section-figure">
+                    <img src="static/images/dataset_stats.png" alt="Distribution of the number of sentences per modification text">
+                    <p class="figure-caption has-text-centered">
+                        Distribution of the number of sentences per modification text in the L-CIRR training set (left) and validation set
+                        (right). Modification texts range from 2 to 10 sentences, with the distribution peaking at 6 sentences in both splits.
+                    </p>
+                </div>
+
+                <p class="has-text-centered"><span class="coming-soon">Dataset release coming soon</span></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Method -->
+<section class="section hero">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-full">
+                <h2 class="title is-3">Method</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        <b>PACE</b> decomposes a long modification text into individual sentences and processes them progressively. The
+                        reference image and the full modification text are first fed into a multimodal encoder to produce a coarse query
+                        embedding, which is then progressively enriched with increasingly detailed textual information, sentence by sentence,
+                        through a stack of shared-weight <i>text accumulators</i>. In addition, <b>Multi-Step Hard Negative Mining</b> uses the
+                        intermediate query embedding of every accumulation step to score the gallery, collecting candidates that rank above the
+                        target as hard negatives. The union across all steps captures hard negatives at multiple levels of textual granularity.
+                    </p>
+                </div>
+
+                <div class="section-figure">
+                    <img src="static/images/framework.png" alt="Overview of the PACE framework">
+                    <p class="figure-caption has-text-centered">
+                        Overview of the PACE framework. The reference image and full modification text are fed into the multimodal encoder to
+                        produce a coarse query embedding, which is progressively enriched with increasingly detailed textual information
+                        sentence by sentence through a stack of shared-weight text accumulators. The resulting final accumulated query
+                        embedding is optimized to distinguish the positive target from hard negative images.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Qualitative Comparison -->
+<section class="section hero">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-full">
+                <h2 class="title is-3">Qualitative Comparison</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        PACE adapts the number of accumulation steps to the number of sentences in the input text, processing short queries
+                        directly while progressively refining its query representation for longer, more detailed ones. This length-aware
+                        processing allows PACE to maintain strong retrieval performance across both general-purpose and fine-grained retrieval
+                        scenarios, whereas models without such a mechanism remain more sensitive to variation in query length.
+                    </p>
+                </div>
+
+                <div class="section-figure">
+                    <img src="static/images/qualitative.png" alt="Qualitative comparison of top-5 retrieval results between PACE and SPRC">
+                    <p class="figure-caption has-text-centered">
+                        Qualitative comparison of top-5 retrieval results between PACE and SPRC, both trained on L-CIRR and evaluated under
+                        CIRR (top) and L-CIRR (bottom) on the same reference image. The blue-bordered image denotes the reference image, the
+                        green-bordered image denotes the ground-truth target, and the red-bordered images denote incorrectly retrieved results.
+                        PACE consistently ranks the correct target at the top-1 position under both query types.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BibTeX -->
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+        <h2 class="title is-3">BibTeX</h2>
+        <pre><code>@inproceedings{jang2026beyond,
+  title     = {Beyond Single Sentences: Composed Image Retrieval with Long-Form Modification Texts},
+  author    = {Jang, Junyeong and Lee, Seongwon},
+  booktitle = {Proceedings of the Asian Conference on Computer Vision (ACCV)},
+  year      = {2026}
+}</code></pre>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="content has-text-centered">
+                    <p class="is-size-7">
+                        This work was supported by the National Research Foundation of Korea (NRF) grants funded by the Korea government
+                        (MSIT) (No. RS-2026-25497410, No. RS-2026-25522067), and by the IITP grant funded by the Korea government (MSIT)
+                        (No. RS-2025-02219317, AI Star Fellowship, Kookmin University).
+                    </p>
+                    <p class="is-size-7">
+                        This page was built using the
+                        <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>,
+                        adopted from the <a href="https://nerfies.github.io/" target="_blank">Nerfies</a> project page. This website is licensed
+                        under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons
+                        Attribution-ShareAlike 4.0 International License</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
