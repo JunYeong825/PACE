@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/Project-Page-1b6ac9.svg"><https://junyeong825.github.io/PACE/>
+  <a href="https://junyeong825.github.io/PACE/"><img src="https://img.shields.io/badge/Project-Page-1b6ac9.svg"></a>
   <a href="#"><img src="https://img.shields.io/badge/Paper-b31b1b.svg"></a>
 </p>
 
