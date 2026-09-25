@@ -7,9 +7,8 @@
 </p>
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/ACCV%202026-Accepted-1b6ac9.svg"></a>
+  <a href="#"><img src="https://img.shields.io/badge/ACCV%202026-1b6ac9.svg"></a>
   <a href="#"><img src="https://img.shields.io/badge/Paper-PDF-b31b1b.svg"></a>
-  <a href="#license"><img src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
 </p>
 
 <p align="center">
@@ -55,10 +54,4 @@ Existing Composed Image Retrieval (CIR) datasets rely on short, single-sentence 
 }
 ```
 
-## Acknowledgments
 
-This work was supported by the National Research Foundation of Korea (NRF) grants funded by the Korea government (MSIT) (No. RS-2026-25497410, No. RS-2026-25522067), and by the Institute of Information & Communications Technology Planning & Evaluation (IITP) grant funded by the Korea government (MSIT) (No. RS-2025-02219317, AI Star Fellowship, Kookmin University).
-
-## License
-
-This project is released under the MIT License. See [LICENSE](LICENSE) for details.
