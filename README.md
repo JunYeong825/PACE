@@ -8,10 +8,8 @@
 
 <p align="center">
   <a href="#"><img src="https://img.shields.io/badge/ACCV%202026-Accepted-1b6ac9.svg"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Paper-PDF-b31b1b.svg"></a>
   <a href="https://junyeong825.github.io/PACE/"><img src="https://img.shields.io/badge/Project-Page-1b6ac9.svg"></a>
   <a href="https://huggingface.co/datasets/JunYeong825/L-CIRR"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-L--CIRR-ffcc00.svg"></a>
-  <a href="#license"><img src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
 </p>
 
 <p align="center">
@@ -71,7 +69,3 @@ paired with them by image id.
 ## Acknowledgments
 
 This work was supported by the National Research Foundation of Korea (NRF) grants funded by the Korea government (MSIT) (No. RS-2026-25497410, No. RS-2026-25522067), and by the Institute of Information & Communications Technology Planning & Evaluation (IITP) grant funded by the Korea government (MSIT) (No. RS-2025-02219317, AI Star Fellowship, Kookmin University).
-
-## License
-
-This project is released under the MIT License. See [LICENSE](LICENSE) for details.
